@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>MUSIC - 束音ロゼ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body { background: #053b2d; color: #ecfdf5; font-family: serif; } .rich-box { border: 1px solid #065f46; background: rgba(6, 78, 59, 0.4); padding: 1.5rem; backdrop-filter: blur(8px); } #menu-overlay { display: none; } #menu-overlay.open { display: flex; }</style>
+</head>
+<body class="p-4 md:p-10">
+    <nav class="max-w-3xl mx-auto mb-10 p-4 flex justify-between items-center bg-[#064e3b]/80 border border-green-700 backdrop-blur-md sticky top-0 z-50">
+        <h1 class="text-2xl font-bold">MUSIC</h1>
+        <button id="hamburger" class="p-3 border border-green-700 rounded bg-green-900 font-bold">MENU</button>
+    </nav>
+    <div id="menu-overlay" class="fixed inset-0 z-[100] bg-[#053b2d]/95 flex flex-col items-center justify-center gap-6">
+        <button id="close-menu" class="absolute top-8 right-8 text-2xl font-bold">✕ CLOSE</button>
+        <a href="index.html" class="text-3xl hover:text-red-400">HOME</a>
+        <a href="index.html#profile" class="text-3xl hover:text-red-400">PROFILE</a>
+        <a href="music.html" class="text-3xl hover:text-red-400">MUSIC</a>
+        <a href="terms.html" class="text-3xl hover:text-red-400">TERMS</a>
+        <a href="faq.html" class="text-3xl hover:text-red-400">FAQ</a>
+    </div>
+    <main class="max-w-3xl mx-auto rich-box">
+        <h2 class="text-2xl font-bold text-red-400 mb-6">UTAU音源</h2>
+        <div class="space-y-6">
+            <div class="border-b border-green-800 pb-4">
+                <p class="font-bold text-lg">束音ロゼー華ーver.（0.0.0）</p>
+                <p class="text-sm text-green-300 mb-2">基本となる、素直で扱いやすい音源です。</p>
+                <a href="/Downloads/roze_utau_v1.zip" class="block w-full bg-green-900/30 p-2 border border-red-900 text-center hover:bg-green-800 transition">ダウンロード (ZIP)</a>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-16 pt-8 border-t border-green-800 text-center text-sm p-4">
+        <h3 class="font-bold text-red-400 mb-2">お問い合わせ</h3>
+        <p><a href="mailto:rozeproject21@gmail.com" class="underline">こちらから</a></p>
+    </footer>
+    <script>
+        const menu = document.getElementById('menu-overlay');
+        document.getElementById('hamburger').onclick = () => menu.classList.add('open');
+        document.getElementById('close-menu').onclick = () => menu.classList.remove('open');
+    </script>
+</body>
+</html>
