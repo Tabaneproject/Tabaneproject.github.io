@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ - 束音ロゼ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body { background: #053b2d; color: #ecfdf5; font-family: serif; } .rich-box { border: 1px solid #065f46; background: rgba(6, 78, 59, 0.4); padding: 1.5rem; backdrop-filter: blur(8px); } #menu-overlay { display: none; } #menu-overlay.open { display: flex; }</style>
+</head>
+<body class="p-4 md:p-10">
+    <nav class="max-w-3xl mx-auto mb-10 p-4 flex justify-between items-center bg-[#064e3b]/80 border border-green-700 backdrop-blur-md sticky top-0 z-50">
+        <h1 class="text-2xl font-bold">FAQ</h1>
+        <button id="hamburger" class="p-3 border border-green-700 rounded bg-green-900 font-bold">MENU</button>
+    </nav>
+    <div id="menu-overlay" class="fixed inset-0 z-[100] bg-[#053b2d]/95 flex flex-col items-center justify-center gap-6">
+        <button id="close-menu" class="absolute top-8 right-8 text-2xl font-bold">✕ CLOSE</button>
+        <a href="index.html" class="text-3xl hover:text-red-400">HOME</a>
+        <a href="index.html#profile" class="text-3xl hover:text-red-400">PROFILE</a>
+        <a href="music.html" class="text-3xl hover:text-red-400">MUSIC</a>
+        <a href="terms.html" class="text-3xl hover:text-red-400">TERMS</a>
+        <a href="faq.html" class="text-3xl hover:text-red-400">FAQ</a>
+    </div>
+    <main class="max-w-3xl mx-auto rich-box">
+        <h2 class="text-2xl font-bold text-red-400 mb-4">FAQ</h2>
+        <div class="space-y-6">
+            <div><p class="font-bold text-lg">Q. 語尾の「アル」は強制ですか？</p><p>A. 私の大事なアイデンティティですが、今は控えております。</p></div>
+            <div><p class="font-bold text-lg">Q. 麻婆豆腐はそんなに美味しいですか？</p><p>A. 激辛の刺激は素粒子物理学にも通じるロマンがあるのです。</p></div>
+        </div>
+    </main>
+    <footer class="mt-16 pt-8 border-t border-green-800 text-center text-sm p-4">
+        <h3 class="font-bold text-red-400 mb-2">お問い合わせ</h3>
+        <p><a href="mailto:rozeproject21@gmail.com" class="underline">Eメール</a></p>
+      　<p><a href="https://x.com/OrionTsuzumi" class="underline">代表者X</a></p>
+    </footer>
+    <script>
+        const menu = document.getElementById('menu-overlay');
+        document.getElementById('hamburger').onclick = () => menu.classList.add('open');
+        document.getElementById('close-menu').onclick = () => menu.classList.remove('open');
+    </script>
+</body>
+</html>
